@@ -1,0 +1,31 @@
+<!-- catalogueList.html -->
+<tabset justified="true">
+    <tab heading="Dictionary">
+    	<div class="list-group">
+    		<div class="list-group-item" ng-repeat="word in catalogue">
+    			<!-- //<pre>{{word |json:2}}</pre> -->
+    			<ul>
+    				<li ng-repeat="explain in word.content.dictionaire.explanation">
+    					<!-- //{{explain|json:2}} -->
+    					<div ng-repeat="(value, key) in explain">
+    						{{key}}<br/> {{value[0]}}
+    						<!-- explanation.pos = array of objects 
+    						like this:
+    						"n. f": [
+	                          "帮助， 援助； 支持， 依靠",
+	                          "救济",
+	                          "pl. （法国君主统治时代）间接税",
+	                          "pl. 驱马方式[指拉缰、踢马刺、吆喝等]",
+	                          "à l'~de依靠, 借助, 使用"
+                        	]
+
+                        	one mor loop required to loop over the explanations once it is found by key
+                         -->
+    					</div>
+    				</li>
+    		    </ul>
+    		</div>
+    	</div>
+    </tab>
+    <tab heading="Example(s)">Short Labeled Justified content</tab>
+</tabset>

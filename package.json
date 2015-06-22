@@ -1,0 +1,30 @@
+{
+  "name": "lashuang",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run wiredep && nodemon server/index.js",
+    "wiredep": "node build-scripts/run-wiredep.js",
+    "less": "node build-scripts/run-less.js client/assets/less/main.less > client/assets/css/main.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AWolf81/Lashuang.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AWolf81/Lashuang/issues"
+  },
+  "homepage": "https://github.com/AWolf81/Lashuang#readme",
+  "devDependencies": {
+    "less": "^2.5.1",
+    "wiredep": "^2.2.2"
+  },
+  "dependencies": {
+    "express": "^4.13.0",
+    "path": "^0.11.14"
+  }
+}
